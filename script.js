@@ -2,7 +2,8 @@
 const CONFIG = {
   passwords: ['кися', 'девушка', 'любовь', 'кошко'], // подходит любой (регистр не важен)
   passwordHint: 'Кто ты для меня?',
-  startDate: '2022-05-03T20:00:00',   // с какого момента вы вместе
+  startDate: '2026-09-19T00:00:00',   // с какого момента вы вместе (счётчик)
+  firstDate: '2026-08-06',            // дата первого свидания (плашка в разделе)
   heartsEnabled: true
 };
 /* ===================================== */
@@ -46,6 +47,7 @@ function tick(){
   if(h < 0){ h += 24; d--; }
   if(d < 0){ d += new Date(now.getFullYear(), now.getMonth(), 0).getDate(); m--; }
   if(m < 0){ m += 12; y--; }
+  $('cY').parentElement.hidden = (y === 0);
   $('cY').textContent = y; $('cM').textContent = m; $('cD').textContent = d;
   $('cH').textContent = h; $('cMin').textContent = mi; $('cS').textContent = s;
 }
@@ -53,7 +55,8 @@ tick(); setInterval(tick, 1000);
 
 /* Дата первого свидания в плашке */
 const dateEl = $('datePill');
-dateEl.textContent = 'Дата: ' + start.toLocaleDateString('ru-RU');
+const [fy, fm, fd] = CONFIG.firstDate.split('-');
+dateEl.textContent = `Дата: ${fd}.${fm}.${fy}`;
 
 /* Музыка */
 const audio = $('audio'), musicBtn = $('music');
