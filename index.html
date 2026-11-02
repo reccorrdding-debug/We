@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Наша история</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<!-- Пароль на вход -->
+<div class="gate" id="gate">
+  <form class="gate-box" id="gateForm">
+    <div class="gate-heart">♡</div>
+    <h2>Только для тебя</h2>
+    <p id="gateHint">Кто ты для меня?</p>
+    <input type="password" id="gateInput" autocomplete="off" aria-label="Пароль">
+    <button type="submit" class="btn">Войти</button>
+    <span class="gate-error" id="gateError"></span>
+  </form>
+</div>
+
+<div class="hearts" id="hearts" aria-hidden="true"></div>
+
+<header class="nav">
+  <a href="#home" class="logo" aria-label="Главная">♡</a>
+  <nav>
+    <a href="#home">Главная</a>
+    <a href="#date">Первое свидание</a>
+    <a href="#moments">Моменты</a>
+    <a href="#future">Будущее</a>
+  </nav>
+  <button class="music" id="music" aria-label="Музыка" title="Музыка">♪</button>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <h1 id="heroTitle">Ты — моя самая красивая история</h1>
+    <p class="sub">Каждый момент с тобой — это волшебство</p>
+    <div class="counter" id="counter" aria-live="off">
+      <div><b id="cY">0</b><span>лет</span></div>
+      <div><b id="cM">0</b><span>месяцев</span></div>
+      <div><b id="cD">0</b><span>дней</span></div>
+      <div><b id="cH">0</b><span>часов</span></div>
+      <div><b id="cMin">0</b><span>минут</span></div>
+      <div><b id="cS">0</b><span>секунд</span></div>
+    </div>
+    <p class="counter-note">мы вместе</p>
+    <a href="#date" class="btn">Начать нашу историю</a>
+  </section>
+
+  <section class="section" id="date">
+    <h2 class="title">Первое свидание</h2>
+    <div class="date-grid">
+      <figure class="photo-frame">
+        <img src="images/date.jpg" alt="Наше первое свидание" loading="lazy">
+      </figure>
+      <div class="date-text">
+        <span class="pill" id="datePill">Дата: 03.05.2022</span>
+        <p>Помню каждую деталь того вечера. Твою улыбку, которая заставила моё сердце биться быстрее. Наш разговор, который не хотелось заканчивать.</p>
+        <p>Это был не просто день — это было начало нашей невероятной истории.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="moments">
+    <h2 class="title">Моменты</h2>
+    <p class="lead">Нажми на фото, чтобы рассмотреть его</p>
+    <div class="gallery" id="gallery">
+      <figure><img src="images/moment1.jpg" alt="Мы на ночной улице" loading="lazy"><figcaption>Ночные прогулки</figcaption></figure>
+      <figure><img src="images/moment2.jpg" alt="Мы в лифте" loading="lazy"><figcaption>Просто мы</figcaption></figure>
+      <figure><img src="images/moment3.jpg" alt="Мы у зеркала" loading="lazy"><figcaption>Уютные вечера</figcaption></figure>
+      <figure><img src="images/moment4.jpg" alt="Наш поцелуй" loading="lazy"><figcaption>Моё любимое</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="section" id="future">
+    <h2 class="title">Будущее</h2>
+    <div class="cards">
+      <article class="card"><div class="emoji">🏡</div><h3>Наш дом</h3><p>Место, где каждое утро мы будем просыпаться вместе, где будут звучать наш смех и музыка.</p></article>
+      <article class="card"><div class="emoji">🌍</div><h3>Путешествия</h3><p>Мы увидим закаты в разных уголках мира, создавая воспоминания, которые останутся навсегда.</p></article>
+      <article class="card"><div class="emoji">💞</div><h3>Вместе навсегда</h3><p>Каждый день я буду показывать тебе, как сильно ты любима. Наша история только начинается.</p></article>
+    </div>
+    <blockquote class="quote">
+      <p>«С тобой я хочу прожить не просто жизнь, а тысячу жизней, где в каждой из них я буду любить тебя всё сильнее.»</p>
+      <cite>Навсегда твой ♡</cite>
+    </blockquote>
+  </section>
+</main>
+
+<footer>
+  <p>Создано с любовью специально для тебя ♡</p>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-close" aria-label="Закрыть">×</button>
+  <img src="" alt="">
+</div>
+
+<audio id="audio" src="music.mp3" loop preload="auto"></audio>
+<script src="script.js"></script>
+</body>
+</html>
